@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: rgb(255, 255, 255, 1);
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .menu {
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: center;
+            margin-top: 150px;
+            position: relative;
+
+
+
+            >h2 {
+                position: absolute;
+                bottom: 120px;
+            }
+
+            >ul {
+                width: 80%;
+                height: 100%;
+                background-color: #23364B;
+                display: flex;
+
+                >li {
+                    position: relative;
+
+                    &:hover {
+                        >.dropmenu {
+                            display: block;
+                        }
+                    }
+
+                    /* border: 1px solid red; */
+                    &:first-of-type {
+                        >a {
+                            background-color: #009fe1;
+                        }
+                    }
+
+                    &:last-of-type {
+                        >a {
+                            border-right: none;
+                        }
+                    }
+
+                    >a {
+                        /* background-color: yellow; */
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        padding: 0 30px;
+                        color: rgba(255, 255, 255, 0.825);
+                        border-right: 1px solid rgba(255, 255, 255, 0.182);
+                        text-transform: uppercase;
+                        transition: .4s;
+
+                        &:hover {
+                            background-color: #009fe1;
+                        }
+                    }
+
+                    /* //////////////////////Dropdown Menu////////////////////// */
+
+                    >.dropmenu {
+                        background-color: #405b7a;
+                        width: 200px;
+                        position: absolute;
+                        left: 0;
+                        top: 80px;
+                        display: none;
+
+                        >li {
+                            /* border: 1px solid red; */
+                            height: 60px;
+
+                            &:nth-of-type {
+                                >a {
+                                    border-bottom: none;
+                                }
+                            }
+
+                            >a {
+                                /* background-color: yellow; */
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                color: rgba(255, 255, 255, 0.742);
+                                text-transform: capitalize;
+                                padding-left: 15px;
+                                border-bottom: 1px solid rgba(255, 255, 255, 0.182);
+                                transition: .4s;
+
+                                &:hover {
+                                    background-color: #009fe1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu">
+        <h2>my profile</h2>
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">flyout</a>
+                <ul class="dropmenu">
+                    <li><a href="">flyout right</a></li>
+                    <li><a href="">flyout left</a></li>
+                    <li><a href="">no flyout</a></li>
+                </ul>
+            </li>
+            <li><a href="">services</a></li>
+            <li><a href="">portfolio</a>
+                <ul class="dropmenu">
+                    <li><a href="">All Projects</a></li>
+                    <li><a href="">Recent Work</a></li>
+                    <li><a href="">Case Studies</a></li>
+                    <li><a href="">Client Projects</a></li>
+                </ul>
+            </li>
+            <li><a href="">megaMenu</a></li>
+            <li><a href="">blog</a></li>
+            <li><a href="">images</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
