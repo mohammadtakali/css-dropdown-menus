@@ -1,6 +1,6 @@
 # CSS Navigation Menus Collection
 
-A collection of pure HTML & CSS navigation menu components — dropdown menus, flyout submenus, and full mega menus — built as a series of practice exercises, each one adding a new interaction pattern.
+A collection of pure HTML & CSS navigation menu components — dropdown menus and full mega menus — built as a series of practice exercises, each one adding a new interaction pattern.
 
 **[Live demo](https://mohammadtakali.github.io/css-dropdown-menus/)**
 
